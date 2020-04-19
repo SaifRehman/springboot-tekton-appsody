@@ -1,0 +1,2 @@
+project-name: appsody-sample-springboot
+stack: docker.io/kabanero/java-spring-boot2:0.3
