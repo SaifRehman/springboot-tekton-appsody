@@ -47,6 +47,7 @@ metadata:
     vendor: Kabanero
     version: 0.3.23
   creationTimestamp: null
+  namespace: kabanero-samples
   labels:
     image.opencontainers.org/title: appsody-sample-springboot
     stack.appsody.dev/id: java-spring-boot2
