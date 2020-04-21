@@ -107,3 +107,31 @@ Follow these steps
 * Click on Personal access tokens.
 * Select Generate new token.
 * Create a Github access token with permission admin:repo_hook
+
+# Configure Tekton pipeline 
+
+1. From CP4A dashboard, click on manage pipelines 
+
+![2](2.png)
+
+2. Click on webhook and populate the following 
+
+![3](3.png)
+
+* Give a name to your webhook
+* Give repo URL you have created 
+* Specify Access token you have got from git
+* choose jabanero namespace
+* choose pipeline to trigger from webhook
+* choose service account as ```kabanero-opeartor```
+* specify internal docker register of ocp
+```
+image-registry.openshift-image-registry.svc:5000/<namespace>
+```
+
+3. Now make any changes to your application push to your github, this will trigger the tekton pipeline automatically 
+
+4. To get routes of your application 
+```
+$ oc get routes -n namespace
+```
